@@ -1,0 +1,13 @@
+# Documentation
+
+Central engineering documentation for the Freediving ROV project.
+
+This folder contains:
+
+- architecture decisions
+- tracking concepts
+- mechanics
+- electronics
+- control strategies
+- test reports
+- development roadmap
