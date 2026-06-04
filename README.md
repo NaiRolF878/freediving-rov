@@ -102,3 +102,30 @@ Der nächste Entwicklungsschritt ist die Implementierung der Softwarearchitektur
 /hardware Mechanik & Elektronik
 /simulations Simulationen
 /datasets Trainings- und Testdaten
+
+
+---
+
+## Projektcharakter
+
+Dieses Projekt wird als technisches Nebenprojekt parallel zum Studium entwickelt.
+
+Schwerpunkte:
+
+- Robotik
+- Unterwassertechnik
+- Computer Vision
+- System Engineering
+- Autonome Systeme
+
+---
+
+## Unterstützung
+
+Technischer Austausch sowie Educational- und Hardware-Support sind jederzeit willkommen.
+
+---
+
+## Status
+
+**Early Development**
