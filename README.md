@@ -1,123 +1,104 @@
 # Autonomous Freediving ROV
 
-Autonomous underwater camera platform for freedivers and scuba divers.
-
-## Vision
-
-A silent and stable underwater drone capable of:
-
-- Following divers autonomously
-- Recording cinematic underwater footage
-- Future AI-based training analysis
-- Optional safety assistance systems
+> Entwicklung einer autonomen Unterwasserdrohne für Freediver und Gerätetaucher.
 
 ---
 
-# MVP Goals
+## Projektvision
 
-- Stable follow mode
-- Marker-based tracking
-- Dual-camera architecture
-- Smooth cinematic movement
-- Robust underwater operation
+Ziel dieses Projekts ist die Entwicklung einer autonomen Unterwasserplattform, die Taucher selbstständig begleitet und hochwertige Videoaufnahmen erstellt.
 
----
+Langfristig soll daraus eine modulare Plattform entstehen, die folgende Bereiche vereint:
 
-# System Architecture
-
-## High-Level Computer
-- NVIDIA Jetson Orin Nano
-- Computer Vision
-- Tracking
-- Follow Logic
-
-## Low-Level Controller
-- Pixhawk 6C / STM32
-- Stabilization
-- Thruster Control
-- Sensor Fusion
+- Autonome Filmaufnahmen
+- Intelligentes Tauchertracking
+- Trainingsanalyse
+- KI-gestützte Auswertung
+- optionale Sicherheitsassistenz
 
 ---
 
-# Tracking Strategy
+## Projektziele
 
-Hybrid tracking system:
+### MVP (Version 1)
 
-1. Marker Tracking (Primary)
-2. Visual Tracking (Secondary)
-3. Motion Prediction (Fallback)
+- Markerbasiertes Tracking
+- Stabiler Follow-Modus
+- Videoaufnahme
+- Datenaufzeichnung
+- Modulare Softwarearchitektur
 
-State Machine:
-- MARKER_LOCK
-- VISUAL_TRACK
-- LOST
+### Zukünftige Erweiterungen
 
----
-
-# Hardware Overview
-
-- 6 Thrusters
-    - 4 Horizontal (X-Layout)
-    - 2 Vertical
-
-- Dual Camera System
-    - Main Camera (Video)
-    - Tracking Camera (Computer Vision)
-
-- Passive Stability
-- Future VBS Integration
+- Visual Tracking
+- Sonar-assisted Tracking
+- Markerfreies Tracking
+- KI-gestützte Tauchererkennung
+- Variable Buoyancy System (VBS)
+- Trainingsanalyse
+- Gesture Control
+- Safety Features
 
 ---
 
-# Development Phases
+## Tracking-Konzept
 
-## Phase 1
-Tracking & Follow Logic (Dry Tests)
+Das System verfolgt einen hybriden Ansatz:
 
-## Phase 2
-Pool Prototype
+1. Marker Tracking
+2. Visual Tracking
+3. Sonar-assisted Tracking
+4. Motion Prediction
 
-## Phase 3
-Depth & Hydrodynamic Optimization
-
-## Phase 4
-AI Features & Advanced Autonomy
+Dadurch soll auch bei kurzzeitigem Markerverlust ein stabiles Tracking gewährleistet werden.
 
 ---
 
-# Repository Structure
+## Hardware-Konzept
 
-/docs          -> Documentation
-/software      -> High-Level Software
-/firmware      -> Low-Level Control
-/hardware      -> CAD & Electronics
-/simulations   -> Simulation & Testing
-/datasets      -> AI Training Data
+- Druckkörper für ca. 100 m Einsatztiefe
+- 6-Thruster-Konfiguration
+- Dual-Kamera-System
+- Passive Stabilisierung
+- spätere VBS-Integration
+- Sonarsystem als zukünftige Erweiterung
 
 ---
 
-# Technologies
+## Software-Architektur
 
-- OpenCV
+### High-Level
+
 - ROS2
-- MAVLink
-- Python
-- C++
-- Jetson Orin Nano
+- OpenCV
+- Tracking
+- State Machine
+- Logging
+
+### Low-Level
+
 - Pixhawk
+- ArduPilot / ArduSub
+- MAVLink
+- Sensorfusion
+- Thrustersteuerung
 
 ---
 
-# Future Features
+## Aktueller Entwicklungsstand
 
-- Marker-free diver tracking
-- AI diver recognition
-- Gesture control
-- Training analytics
-- Safety functions
+Das Projekt befindet sich aktuell in der Architektur- und Konzeptphase.
+
+Aufgrund der anstehenden Klausurphase wird die aktive Entwicklung vorübergehend reduziert.
+
+Der nächste Entwicklungsschritt ist die Implementierung der Softwarearchitektur auf Basis von ROS2.
 
 ---
 
-# Status
-
-Currently in architecture & tracking prototype phase.
+## Repository-Struktur
+/docs Dokumentation
+/software High-Level Software
+/firmware Low-Level Firmware
+/hardware Mechanik & Elektronik
+/simulations Simulationen
+/datasets Trainings- und Testdaten
